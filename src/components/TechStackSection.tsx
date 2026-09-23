@@ -14,10 +14,10 @@ import {
   PrismaIcon,
   TailwindIcon,
   GitIcon,
-  StudioIcon,
+  VsCodeIcon,
   CapCutIcon,
   PremiereIcon,
-  TalentIcon,
+  CanvaIcon,
 } from '@/components/Icons';
 
 const tools = [
@@ -33,10 +33,10 @@ const tools = [
   { name: 'Prisma', short: 'Prisma', icon: PrismaIcon },
   { name: 'Tailwind', short: 'Tailwind', icon: TailwindIcon },
   { name: 'Git', short: 'Git', icon: GitIcon },
-  { name: 'Broadcast', short: 'Studio', icon: StudioIcon },
+  { name: 'VS Code', short: 'VS Code', icon: VsCodeIcon },
   { name: 'CapCut', short: 'CapCut', icon: CapCutIcon },
   { name: 'Premiere', short: 'Premiere', icon: PremiereIcon },
-  { name: 'On-Camera', short: 'Talent', icon: TalentIcon },
+  { name: 'Canva', short: 'Canva', icon: CanvaIcon },
 ];
 
 const capabilityCards = [

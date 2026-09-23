@@ -5,23 +5,23 @@ export const personalInfo = {
   nickname: "Danindra",
   headline: "Hi, I'm",
   roles: [
-    "Fullstack Developer",
+    "Full-Stack Developer",
     "Broadcast & Media Talent"
   ],
-  tagline: "Bridging modern software engineering with dynamic broadcast & creative storytelling.",
-  aboutShort: "Halo! Saya adalah seorang Fullstack Web Developer yang memadukan keahlian teknis logika pemrograman modern dengan kepekaan visual, public speaking, serta pengalaman nyata di dunia broadcast dan talent video promosi.",
-  aboutDetail: "Bagi saya, teknologi dan media kreatif adalah dua hal yang saling melengkapi. Dengan latar belakang pengembangan aplikasi web (Next.js, Node.js, Express, React, Database) serta pengalaman di stasiun broadcast dan talent di depan kamera, saya mampu mengomunikasikan ide-ide kompleks menjadi produk digital yang intuitif, estetik, dan berdaya guna.",
+  tagline: "Bridging modern full-stack web engineering with dynamic broadcast & creative storytelling.",
+  aboutShort: "A 23-year-old Bachelor's Degree graduate in Informatics Engineering from Pamulang University with experience working across professional environments. Responsible, adaptable, and equipped with strong communication, teamwork, problem-solving, and continuous learning agility.",
+  aboutDetail: "With Perseverance, Attention-to-Detail, and a Growth Mindset, I combine full-stack development skills (Laravel, React.js, Next.js, Node.js, Express.js, PostgreSQL, MySQL) with real-world experience in broadcast engineering, system development, and on-camera media performance to build reliable digital products.",
   stats: [
     { label: "Dual Expertise", value: "IT & Media" },
-    { label: "Projects Completed", value: "12+" },
-    { label: "Broadcast & Video Works", value: "8+ Productions" },
-    { label: "Tech Core", value: "Next.js & Node.js" },
+    { label: "GPA", value: "3.48 / 4.00" },
+    { label: "Core Stack", value: "Laravel & React" },
+    { label: "Databases", value: "PostgreSQL & MySQL" },
   ],
   personalDetails: [
     { label: "Name", value: "Danindra Irvanto" },
     { label: "Place of Birth", value: "Tangerang, Indonesia" },
-    { label: "Phone", value: "+62 813-8468-2074", isLink: true, link: "https://wa.me/6281384682074" },
-    { label: "Education", value: "Universitas Pamulang" },
+    { label: "Phone", value: "+62 813 8468 2073", isLink: true, link: "https://wa.me/6281384682073" },
+    { label: "Education", value: "Universitas Pamulang (S1 Informatika)" },
     { label: "Email", value: "danindrairvanto07@gmail.com", isLink: true, link: "mailto:danindrairvanto07@gmail.com" },
     { label: "Status", value: "Open for Full-time" }
   ],
@@ -30,7 +30,7 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/danindra-irvan",
     instagram: "https://www.instagram.com/danindrairvan/",
     email: "mailto:danindrairvanto07@gmail.com",
-    whatsapp: "https://wa.me/6281384682074"
+    whatsapp: "https://wa.me/6281384682073"
   },
   cvUrl: "/Danindra_Irvanto_CV.pdf"
 };
@@ -38,82 +38,88 @@ export const personalInfo = {
 export const experiencesData: ExperienceItem[] = [
   {
     id: "exp-1",
-    period: "Mei 2026 - Sept 2026",
-    role: "Full Stack Developer Intern",
-    company: "PT DumbWays Indonesia Teknologi",
-    location: "Ciputat, South Tangerang",
-    description: "Developing and maintaining modern fullstack web applications using cutting-edge JavaScript ecosystem and relational databases.",
+    period: "Mei 2026 – Sept 2026",
+    role: "Full-Stack Developer Intern",
+    company: "PT DumbWays Indonesia",
+    location: "Ciputat, South Tangerang, Indonesia",
+    description: "Developed and enhanced web applications and core features with a focus on reliability, cross-functional collaboration, and performance.",
     highlights: [
-      "Developed and maintained full-stack web applications using modern JavaScript technologies.",
-      "Collaborated with mentors and team members to build responsive and scalable features.",
-      "Improved problem-solving and practical skills in frontend, backend, and database development."
+      "Developed and enhanced features for a web-based booking application using Laravel.",
+      "Translated business requirements into functional application features and improvements.",
+      "Collaborated with cross-functional teams to test, maintain, and optimize system performance.",
+      "Resolved bugs and technical issues to improve application reliability and user experience."
     ],
-    skills: ["Full Stack", "JavaScript", "React.js", "Node.js", "Express.js", "PostgreSQL", "REST APIs"],
+    skills: ["Laravel", "PHP", "Full-Stack", "JavaScript", "System Testing", "REST APIs"],
     category: "it"
   },
   {
     id: "exp-2",
-    period: "Mei 2024 - Aug 2024",
-    role: "Intern Broadcast Engineering",
+    period: "Jun 2023 – Dec 2023",
+    role: "Full-Stack Developer Intern",
     company: "LPP TVRI STASIUN JAKARTA",
-    location: "Gelora, Tanah Abang, Jakarta Pusat",
-    description: "Supported broadcast studio operations, technical maintenance, floor planning, and production management.",
+    location: "Gelora, Tanah Abang, Jakarta, Indonesia",
+    description: "Supported broadcast studio operations, technical maintenance, floor planning, and internal system development.",
     highlights: [
       "Conducted routine inspections and maintenance of broadcast equipment every two weeks.",
       "Created floor diagrams for studio and outdoor production setups.",
       "Ensured smooth and uninterrupted broadcasting operations.",
       "Developed a production equipment loan management system for external office assignments."
     ],
-    skills: ["Broadcast Operations", "Studio Equipment", "Floor Diagrams", "Equipment Maintenance", "Management System"],
+    skills: ["Loan Management System", "Broadcast Operations", "Floor Diagrams", "Equipment Maintenance"],
     category: "broadcast"
   },
   {
     id: "exp-3",
-    period: "March 2022 - Nov 2025",
-    role: "Production Operator",
+    period: "Jun 2022 – May 2023",
+    role: "Programming Teaching Assistant",
     company: "PT. Victory Chingluh Indonesia",
-    location: "Pasar Kemis, Kab. Tangerang, Banten",
-    description: "PT Victory Chingluh Indonesia is a Taiwanese foreign investment manufacturing company specializing in the production of sports footwear. The company is one of the major manufacturing suppliers for Nike, a leading global sportswear brand.",
+    location: "Pasar Kemis, Kab. Tangerang, Indonesia",
+    description: "Operated computerized manufacturing machinery, pattern programming, embossing, and conducted self-quality inspections for Nike sportswear footwear.",
     highlights: [
       "Conducted ISQ (Inspect Self Quality) inspections in the Lasting & Assembly process to ensure lasted shoe uppers met established quality standards.",
       "Operated Hot & Cold Backpart Molding Machines for heel counter pre-forming according to quality standards and shoe last specifications.",
       "Operated Computerized Pattern Sewing Machines to perform precise and complex stitching of shoe upper components, including logos, eyestays, and reinforcements.",
       "Operated Hot/Cold Embossing Machines to create logos, 3D textures, and pattern details on synthetic leather, mesh, and leather materials."
     ],
-    skills: ["ISQ Inspection", "Pattern Sewing Machines", "Hot/Cold Embossing", "Molding Machines", "Nike Quality Standards"],
+    skills: ["Computerized Pattern Sewing", "Hot/Cold Embossing", "ISQ Inspection", "Molding Machines", "Nike Quality Standards"],
     category: "it"
   }
 ];
 
 export const skillsData: SkillItem[] = [
-  // Frontend
-  { name: "React.js", category: "frontend", highlight: "Component Architecture" },
-  { name: "Next.js (App Router)", category: "frontend", highlight: "SSR / ISR / Fullstack" },
+  // Programming Languages
   { name: "TypeScript", category: "frontend", highlight: "Type Safety" },
-  { name: "Tailwind CSS", category: "frontend", highlight: "Modern Styling" },
+  { name: "JavaScript", category: "frontend", highlight: "ES6+ Modern Syntax" },
+  { name: "PHP", category: "backend", highlight: "Server-side Language" },
+  { name: "Java", category: "backend", highlight: "OOP & Architecture" },
+
+  // Frontend Technologies
+  { name: "React.js", category: "frontend", highlight: "Component UI" },
+  { name: "Next.js", category: "frontend", highlight: "SSR & Fullstack" },
+  { name: "Tailwind CSS", category: "frontend", highlight: "Utility-first Styling" },
   { name: "HTML5 / CSS3", category: "frontend", highlight: "Semantic & Responsive" },
-  { name: "Framer Motion", category: "frontend", highlight: "Fluid Animations" },
   
-  // Backend
+  // Backend Technologies
+  { name: "Laravel", category: "backend", highlight: "MVC Framework" },
   { name: "Node.js", category: "backend", highlight: "Runtime Environment" },
-  { name: "Express.js", category: "backend", highlight: "RESTful API Engine" },
-  { name: "Next.js Server Actions", category: "backend", highlight: "Seamless Fullstack" },
-  { name: "RESTful APIs", category: "backend", highlight: "Architecture & Security" },
+  { name: "Express.js", category: "backend", highlight: "RESTful APIs" },
   
-  // Database & Tools
+  // Databases
   { name: "PostgreSQL", category: "database", highlight: "Relational DB" },
-  { name: "MySQL", category: "database", highlight: "Database Design" },
-  { name: "Prisma ORM", category: "database", highlight: "Type-safe DB Queries" },
-  { name: "Git & GitHub", category: "tools", highlight: "Version Control" },
-  { name: "Postman", category: "tools", highlight: "API Testing" },
-  { name: "Vercel / Linux", category: "tools", highlight: "Cloud Deployment" },
+  { name: "MySQL", category: "database", highlight: "Relational DB" },
+  { name: "Supabase", category: "database", highlight: "BaaS & Postgres" },
   
-  // Broadcast & Creative
-  { name: "On-Camera Talent", category: "broadcast_creative", highlight: "Host / Video Talent" },
-  { name: "Broadcast Studio Ops", category: "broadcast_creative", highlight: "Technical Live Control" },
-  { name: "Video Production & Direction", category: "broadcast_creative", highlight: "Storyboard to Final" },
-  { name: "Video Editing", category: "broadcast_creative", highlight: "Premiere Pro & CapCut" },
-  { name: "Public Speaking & Voice", category: "broadcast_creative", highlight: "Clear Communication" }
+  // Tools & Platforms
+  { name: "Git & GitHub", category: "tools", highlight: "Version Control" },
+  { name: "VS Code", category: "tools", highlight: "Development IDE" },
+  { name: "Midtrans", category: "tools", highlight: "Payment Gateway" },
+  { name: "Canva", category: "tools", highlight: "Creative Design" },
+  
+  // Soft Skills & Broadcast
+  { name: "On-Camera Talent", category: "broadcast_creative", highlight: "Video & Host Talent" },
+  { name: "Public Speaking", category: "broadcast_creative", highlight: "Clear Communication" },
+  { name: "Problem Solving", category: "broadcast_creative", highlight: "Analytical Thinking" },
+  { name: "Team Work", category: "broadcast_creative", highlight: "Cross-functional Agility" }
 ];
 
 export const projectsData: ProjectItem[] = [

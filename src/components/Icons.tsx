@@ -131,14 +131,10 @@ export function GitIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function StudioIcon(props: React.SVGProps<SVGSVGElement>) {
+export function VsCodeIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="24" height="24" {...props}>
-      <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
-      <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
-      <circle cx="12" cy="12" r="2" />
-      <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" />
-      <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" />
+    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" {...props}>
+      <path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.94-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z" />
     </svg>
   );
 }
@@ -160,13 +156,10 @@ export function PremiereIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function TalentIcon(props: React.SVGProps<SVGSVGElement>) {
+export function CanvaIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="24" height="24" {...props}>
-      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
-      <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
-      <line x1="12" x2="12" y1="19" y2="22" />
-      <line x1="8" x2="16" y1="22" y2="22" />
+    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" {...props}>
+      <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm1.758 17.202c-1.896 0-3.32-.977-4.14-2.193l-.865 2.016H7.13L10.02 6.798h1.696l-1.636 5.86c.677-.852 1.75-1.42 2.92-1.42 2.302 0 3.738 1.704 3.738 3.923 0 2.45-1.734 4.041-4.98 4.041zm.23-1.442c2.096 0 3.125-1.077 3.125-2.613 0-1.455-.99-2.584-2.478-2.584-1.294 0-2.296.88-2.73 2.146.43 1.83 1.26 3.051 2.083 3.051z" />
     </svg>
   );
 }
