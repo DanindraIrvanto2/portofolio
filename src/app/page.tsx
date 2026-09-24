@@ -10,10 +10,25 @@ import TechStackSection from '@/components/TechStackSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import MouseSpotlight from '@/components/MouseSpotlight';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
+  // Reset scroll to top and clear hash on reload/load
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if ('scrollRestoration' in window.history) {
+        window.history.scrollRestoration = 'manual';
+      }
+      if (window.location.hash) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   // Sync dark mode class on HTML document
   useEffect(() => {
     if (darkMode) {
@@ -26,7 +41,19 @@ export default function Home() {
   return (
     <>
       {/* Aesthetic Loading Screen (RyHar & TikTok Reference) */}
-      {isLoading && <Preloader onComplete={() => setIsLoading(false)} />}
+      {isLoading && (
+        <Preloader
+          onComplete={() => {
+            setIsLoading(false);
+            if (typeof window !== 'undefined') {
+              window.scrollTo(0, 0);
+            }
+          }}
+        />
+      )}
+
+      {/* Ambient Mouse Spotlight Glow */}
+      <MouseSpotlight />
 
       <div
         className={`min-h-screen flex flex-col transition-opacity duration-700 ${
@@ -48,6 +75,9 @@ export default function Home() {
 
         {/* Footer */}
         <Footer />
+
+        {/* Scroll To Top Interactive Widget */}
+        <ScrollToTop />
       </div>
     </>
   );

@@ -66,19 +66,26 @@ export default function Navbar({ darkMode, setDarkMode }: NavbarProps) {
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-1 lg:gap-2">
+          <div className="hidden md:flex items-center gap-1 lg:gap-1.5 p-1 bg-[var(--text-secondary)]/5 rounded-2xl border border-[var(--border-color)]">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`px-3.5 py-1.5 text-sm font-semibold rounded-xl transition-all duration-200 ${
+                  className={`relative px-4 py-2 text-xs lg:text-sm font-semibold rounded-xl transition-colors duration-200 z-10 ${
                     isActive
-                      ? 'text-[var(--text-primary)] bg-[var(--text-secondary)]/10'
-                      : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--text-secondary)]/5'
+                      ? 'text-[var(--text-primary)]'
+                      : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                   }`}
                 >
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeNavPill"
+                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      className="absolute inset-0 bg-[var(--card-bg)] dark:bg-[var(--thirdary)] border border-[var(--border-color)] rounded-xl shadow-xs -z-10"
+                    />
+                  )}
                   {link.name}
                 </a>
               );

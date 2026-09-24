@@ -24,7 +24,7 @@ export interface ExperienceItem {
   description: string;
   highlights: string[];
   skills: string[];
-  category: 'it' | 'broadcast' | 'creative';
+  category: 'it' | 'broadcast' | 'creative' | 'operations' | 'manufacturing';
 }
 
 export interface SkillItem {

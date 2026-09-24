@@ -47,19 +47,26 @@ export default function ProjectsSection() {
         </motion.div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center gap-2 p-1.5 bg-[var(--card-bg)] border border-[var(--border-color)] rounded-2xl backdrop-blur-md">
+        <div className="flex flex-wrap items-center gap-1.5 p-1.5 bg-[var(--card-bg)] border border-[var(--border-color)] rounded-2xl backdrop-blur-md">
           {filterTabs.map((tab) => {
             const isActive = activeTab === tab.id;
             return (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 cursor-pointer ${
+                className={`relative px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-colors duration-200 cursor-pointer z-10 ${
                   isActive
-                    ? 'bg-[var(--text-primary)] text-[var(--background)] shadow-md'
-                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--text-secondary)]/10'
+                    ? 'text-[var(--background)]'
+                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
                 }`}
               >
+                {isActive && (
+                  <motion.div
+                    layoutId="activeFilterPill"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    className="absolute inset-0 bg-[var(--text-primary)] rounded-xl shadow-md -z-10"
+                  />
+                )}
                 {tab.label}
               </button>
             );

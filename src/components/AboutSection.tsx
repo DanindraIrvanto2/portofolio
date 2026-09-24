@@ -1,12 +1,20 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { personalInfo } from '../data/portfolioData';
-import { Terminal, Video } from 'lucide-react';
+import { Terminal, Video, Copy, Check } from 'lucide-react';
 
 export default function AboutSection() {
+  const [copiedKey, setCopiedKey] = useState<string | null>(null);
+
+  const handleCopy = (key: string, text: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedKey(key);
+    setTimeout(() => setCopiedKey(null), 2000);
+  };
+
   return (
     <section
       id="about"
@@ -96,28 +104,50 @@ export default function AboutSection() {
               Personal Information
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-8">
-              {personalInfo.personalDetails.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col p-3 -m-1 rounded-xl hover:bg-[var(--thirdary)] transition-colors duration-200"
-                >
-                  <span className="text-xs uppercase tracking-wider font-bold text-[var(--text-secondary)] mb-1">
-                    {item.label}
-                  </span>
-                  {item.isLink ? (
-                    <a
-                      href={item.link}
-                      className="text-sm sm:text-base font-semibold text-[var(--text-primary)] hover:text-[var(--text-secondary)] transition-colors underline decoration-[var(--border-color)] underline-offset-4"
-                    >
-                      {item.value}
-                    </a>
-                  ) : (
-                    <span className="text-sm sm:text-base font-semibold text-[var(--text-primary)]">
-                      {item.value}
-                    </span>
-                  )}
-                </div>
-              ))}
+              {personalInfo.personalDetails.map((item, index) => {
+                const isCopyable = item.label === 'Phone' || item.label === 'Email';
+                const isCopied = copiedKey === item.label;
+
+                return (
+                  <div
+                    key={index}
+                    className="group/detail flex flex-col p-3 -m-1 rounded-xl hover:bg-[var(--thirdary)] transition-colors duration-200 relative"
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs uppercase tracking-wider font-bold text-[var(--text-secondary)]">
+                        {item.label}
+                      </span>
+                      {isCopyable && (
+                        <button
+                          onClick={() => handleCopy(item.label, item.value)}
+                          className="opacity-0 group-hover/detail:opacity-100 transition-opacity p-1 hover:bg-[var(--text-secondary)]/15 rounded-md text-[var(--text-secondary)] hover:text-[var(--text-primary)] text-xs flex items-center gap-1 cursor-pointer"
+                          title={`Copy ${item.label}`}
+                        >
+                          {isCopied ? (
+                            <span className="text-[10px] font-semibold text-emerald-500 flex items-center gap-0.5">
+                              <Check className="w-3 h-3" /> Copied
+                            </span>
+                          ) : (
+                            <Copy className="w-3 h-3" />
+                          )}
+                        </button>
+                      )}
+                    </div>
+                    {item.isLink ? (
+                      <a
+                        href={item.link}
+                        className="text-sm sm:text-base font-semibold text-[var(--text-primary)] hover:text-[var(--text-secondary)] transition-colors underline decoration-[var(--border-color)] underline-offset-4"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <span className="text-sm sm:text-base font-semibold text-[var(--text-primary)]">
+                        {item.value}
+                      </span>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </motion.div>

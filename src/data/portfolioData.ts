@@ -8,9 +8,8 @@ export const personalInfo = {
     "Full-Stack Developer",
     "Broadcast & Media Talent"
   ],
-  tagline: "Bridging modern full-stack web engineering with dynamic broadcast & creative storytelling.",
-  aboutShort: "A 23-year-old Bachelor's Degree graduate in Informatics Engineering from Pamulang University with experience working across professional environments. Responsible, adaptable, and equipped with strong communication, teamwork, problem-solving, and continuous learning agility.",
-  aboutDetail: "With Perseverance, Attention-to-Detail, and a Growth Mindset, I combine full-stack development skills (Laravel, React.js, Next.js, Node.js, Express.js, PostgreSQL, MySQL) with real-world experience in broadcast engineering, system development, and on-camera media performance to build reliable digital products.",
+  aboutShort: "Halo! Saya adalah seorang Fullstack Web Developer yang memadukan keahlian teknis logika pemrograman modern dengan kepekaan visual, public speaking, serta pengalaman nyata di dunia broadcast dan talent video promosi.",
+  aboutDetail: "Bagi saya, teknologi dan media kreatif adalah dua hal yang saling melengkapi. Dengan latar belakang pengembangan aplikasi web (Laravel, React.js, Next.js, Node.js, Express.js, PostgreSQL, MySQL) serta pengalaman di stasiun broadcast dan talent di depan kamera, saya mampu mengomunikasikan ide-ide kompleks menjadi produk digital yang intuitif, estetik, dan berdaya guna.",
   stats: [
     { label: "Dual Expertise", value: "IT & Media" },
     { label: "GPA", value: "3.48 / 4.00" },
@@ -20,8 +19,8 @@ export const personalInfo = {
   personalDetails: [
     { label: "Name", value: "Danindra Irvanto" },
     { label: "Place of Birth", value: "Tangerang, Indonesia" },
-    { label: "Phone", value: "+62 813 8468 2073", isLink: true, link: "https://wa.me/6281384682073" },
-    { label: "Education", value: "Universitas Pamulang (S1 Informatika)" },
+    { label: "Phone", value: "+62 813 8468 2074", isLink: true, link: "https://wa.me/6281384682074" },
+    { label: "Education", value: "Universitas Pamulang" },
     { label: "Email", value: "danindrairvanto07@gmail.com", isLink: true, link: "mailto:danindrairvanto07@gmail.com" },
     { label: "Status", value: "Open for Full-time" }
   ],
@@ -30,7 +29,7 @@ export const personalInfo = {
     linkedin: "https://www.linkedin.com/in/danindra-irvan",
     instagram: "https://www.instagram.com/danindrairvan/",
     email: "mailto:danindrairvanto07@gmail.com",
-    whatsapp: "https://wa.me/6281384682073"
+    whatsapp: "https://wa.me/6281384682074"
   },
   cvUrl: "/Danindra_Irvanto_CV.pdf"
 };
@@ -55,7 +54,7 @@ export const experiencesData: ExperienceItem[] = [
   {
     id: "exp-2",
     period: "Jun 2023 – Dec 2023",
-    role: "Full-Stack Developer Intern",
+    role: "Broadcast Engineer Intern",
     company: "LPP TVRI STASIUN JAKARTA",
     location: "Gelora, Tanah Abang, Jakarta, Indonesia",
     description: "Supported broadcast studio operations, technical maintenance, floor planning, and internal system development.",
@@ -71,7 +70,7 @@ export const experiencesData: ExperienceItem[] = [
   {
     id: "exp-3",
     period: "Jun 2022 – May 2023",
-    role: "Programming Teaching Assistant",
+    role: "Production Operator",
     company: "PT. Victory Chingluh Indonesia",
     location: "Pasar Kemis, Kab. Tangerang, Indonesia",
     description: "Operated computerized manufacturing machinery, pattern programming, embossing, and conducted self-quality inspections for Nike sportswear footwear.",
@@ -82,7 +81,7 @@ export const experiencesData: ExperienceItem[] = [
       "Operated Hot/Cold Embossing Machines to create logos, 3D textures, and pattern details on synthetic leather, mesh, and leather materials."
     ],
     skills: ["Computerized Pattern Sewing", "Hot/Cold Embossing", "ISQ Inspection", "Molding Machines", "Nike Quality Standards"],
-    category: "it"
+    category: "operations"
   }
 ];
 
